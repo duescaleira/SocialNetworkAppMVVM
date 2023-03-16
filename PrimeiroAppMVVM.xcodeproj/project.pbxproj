@@ -18,6 +18,7 @@
 		4379D30129C3813500EFB73A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D30029C3813500EFB73A /* HomeViewModel.swift */; };
 		4379D30529C3851300EFB73A /* StoryCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D30429C3851300EFB73A /* StoryCardCollectionViewCell.swift */; };
 		4379D30829C3867300EFB73A /* StoryCardCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D30729C3867300EFB73A /* StoryCardCollectionViewCellScreen.swift */; };
+		4379D30B29C38D1D00EFB73A /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D30A29C38D1D00EFB73A /* StoryCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4379D30029C3813500EFB73A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4379D30429C3851300EFB73A /* StoryCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		4379D30729C3867300EFB73A /* StoryCardCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardCollectionViewCellScreen.swift; sourceTree = "<group>"; };
+		4379D30A29C38D1D00EFB73A /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		4379D30329C384DB00EFB73A /* StoryCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				4379D30929C38CFB00EFB73A /* ViewModel */,
 				4379D30629C3865A00EFB73A /* Screen */,
 				4379D30429C3851300EFB73A /* StoryCardCollectionViewCell.swift */,
 			);
@@ -120,6 +123,14 @@
 				4379D30729C3867300EFB73A /* StoryCardCollectionViewCellScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		4379D30929C38CFB00EFB73A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4379D30A29C38D1D00EFB73A /* StoryCardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 				4379D2E829C3741600EFB73A /* HomeVC.swift in Sources */,
 				4379D30529C3851300EFB73A /* StoryCardCollectionViewCell.swift in Sources */,
 				4379D30129C3813500EFB73A /* HomeViewModel.swift in Sources */,
+				4379D30B29C38D1D00EFB73A /* StoryCardViewModel.swift in Sources */,
 				4379D2E429C3741600EFB73A /* AppDelegate.swift in Sources */,
 				4379D2FF29C37E3500EFB73A /* UIColor + Extension.swift in Sources */,
 				4379D2FD29C37CDD00EFB73A /* UIView + Extension.swift in Sources */,

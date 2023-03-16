@@ -17,11 +17,31 @@ class StoryCardCollectionViewCellScreen: UIView {
         view.setCardShadow()
         return view
     }()
+    
+    lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false // setar as constraints manualmente
+        cv.showsVerticalScrollIndicator = false // tira a barrinha que visualiza no scroll
+//        cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
+        cv.backgroundColor = .clear
+        cv.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        return cv
+    }()
+    
+    // MARK: - ASSINAR OS PROTOCOLOS
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, datasource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = datasource
+    }
+    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
         configConstraints()
+        collectionView.pin(to: cardView) // setando as constraints zeradas pela cardView
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +50,7 @@ class StoryCardCollectionViewCellScreen: UIView {
     
     private func addElements() {
         addSubview(cardView)
+        cardView.addSubview(collectionView)
     }
     
     private func configConstraints() {

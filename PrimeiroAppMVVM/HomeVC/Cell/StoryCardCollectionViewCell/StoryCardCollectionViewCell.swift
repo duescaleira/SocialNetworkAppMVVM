@@ -16,6 +16,7 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configScreen()
+        screen.configProtocolsCollectionView(delegate: self, datasource: self)
     }
     
     required init?(coder: NSCoder) {
@@ -27,5 +28,19 @@ class StoryCardCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(screen)
         screen.pin(to: contentView)
     }
+}
+
+extension StoryCardCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
+    
+    
     
 }
