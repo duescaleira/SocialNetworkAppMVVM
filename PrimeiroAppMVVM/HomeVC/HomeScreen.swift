@@ -15,7 +15,7 @@ class HomeScreen: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false // setar as constraints manualmente
         cv.showsHorizontalScrollIndicator = false // tira a barrinha que visualiza no scroll
-        // TO DO: REGISTER
+        cv.register(StoryCardCollectionViewCell.self, forCellWithReuseIdentifier: StoryCardCollectionViewCell.identifier)
         cv.backgroundColor = .clear
         return cv
     }()
