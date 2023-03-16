@@ -8,13 +8,41 @@
 import UIKit
 
 class HomeScreen: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false // setar as constraints manualmente
+        cv.showsHorizontalScrollIndicator = false // tira a barrinha que visualiza no scroll
+        // TO DO: REGISTER
+        cv.backgroundColor = .clear
+        return cv
+    }()
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, datasource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = datasource
+        
     }
-    */
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addViews()
+        configConstraints()
+        backgroundColor = .appBAckGround
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func addViews() {
+        addSubview(collectionView)
+    }
+    
+    private func configConstraints() {
+        collectionView.pin(to: self)
+    }
+    
 }
