@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4320CF5329C8C16600308390 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4320CF5229C8C16600308390 /* Stories.swift */; };
 		4379D2E429C3741600EFB73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D2E329C3741600EFB73A /* AppDelegate.swift */; };
 		4379D2E629C3741600EFB73A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D2E529C3741600EFB73A /* SceneDelegate.swift */; };
 		4379D2E829C3741600EFB73A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D2E729C3741600EFB73A /* HomeVC.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4320CF5229C8C16600308390 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		4379D2E029C3741600EFB73A /* PrimeiroAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4379D2E329C3741600EFB73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4379D2E529C3741600EFB73A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4320CF5129C8C14C00308390 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4320CF5229C8C16600308390 /* Stories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4320CF5429C8C1AD00308390 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4379D2F729C37ACC00EFB73A /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		4320CF5529C8C1BD00308390 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4379D30029C3813500EFB73A /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4379D2D729C3741600EFB73A = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +94,7 @@
 		4379D2E229C3741600EFB73A /* PrimeiroAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4320CF5129C8C14C00308390 /* Model */,
 				4379D2FB29C37CC400EFB73A /* Extension */,
 				4379D2FA29C37AE000EFB73A /* HomeVC */,
 				4379D2E329C3741600EFB73A /* AppDelegate.swift */,
@@ -82,10 +109,10 @@
 		4379D2FA29C37AE000EFB73A /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				4320CF5529C8C1BD00308390 /* ViewModel */,
+				4320CF5429C8C1AD00308390 /* Screen */,
 				4379D30229C384D200EFB73A /* Cell */,
 				4379D2E729C3741600EFB73A /* HomeVC.swift */,
-				4379D2F729C37ACC00EFB73A /* HomeScreen.swift */,
-				4379D30029C3813500EFB73A /* HomeViewModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -208,6 +235,7 @@
 				4379D30529C3851300EFB73A /* StoryCardCollectionViewCell.swift in Sources */,
 				4379D30129C3813500EFB73A /* HomeViewModel.swift in Sources */,
 				4379D30B29C38D1D00EFB73A /* StoryCardViewModel.swift in Sources */,
+				4320CF5329C8C16600308390 /* Stories.swift in Sources */,
 				4379D2E429C3741600EFB73A /* AppDelegate.swift in Sources */,
 				4379D2FF29C37E3500EFB73A /* UIColor + Extension.swift in Sources */,
 				4379D2FD29C37CDD00EFB73A /* UIView + Extension.swift in Sources */,
