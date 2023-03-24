@@ -28,8 +28,21 @@ class HomeViewModel {
         story
     }
     
+    private var posts = [
+    
+    Posts(profileImage: "img2", userName: "Jack", postImage: "post1"),
+    Posts(profileImage: "img4", userName: "Samuel", postImage: "post2"),
+    Posts(profileImage: "img3", userName: "Carolina", postImage: "post3"),
+    Posts(profileImage: "img6", userName: "Puggy_101", postImage: "post4"),
+          
+    ]
+    
+    public var getListPosts: [Posts] {
+        posts
+    }
+    
     public var numberOfItems: Int {
-        1
+        2
     }
     
     public func sizeForItem(indexPath: IndexPath, frame: CGRect) -> CGSize {

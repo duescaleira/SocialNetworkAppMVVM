@@ -12,7 +12,7 @@ class StoryCollectionViewCellScreen: UIView {
     lazy var profileImageView: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.contentMode = .scaleAspectFit
+        img.contentMode = .scaleAspectFill
         img.layer.cornerRadius = 35
         img.clipsToBounds = true
         return img
@@ -28,7 +28,7 @@ class StoryCollectionViewCellScreen: UIView {
         return btn
     }()
     
-    lazy var userName: UILabel = {
+    lazy var userNameLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -39,6 +39,7 @@ class StoryCollectionViewCellScreen: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
+        configContraints() 
     }
     
     required init?(coder: NSCoder) {
@@ -48,7 +49,7 @@ class StoryCollectionViewCellScreen: UIView {
     private func addElements() {
         addSubview(profileImageView)
         addSubview(addButton)
-        addSubview(userName)
+        addSubview(userNameLabel)
     }
     
     private func configContraints() {
@@ -64,9 +65,9 @@ class StoryCollectionViewCellScreen: UIView {
             addButton.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
             addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             
-            userName.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10),
-            userName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            userNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10),
+            userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
         
         ])
     }
